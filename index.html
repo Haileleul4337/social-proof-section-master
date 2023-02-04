@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap" rel="stylesheet">
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Social proof section</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+
+      h1{
+        font-family: 'League Spartan', sans-serif;
+        color: hsl(300, 43%, 22%);
+        font-size: 3rem;
+        font-weight: 900;
+        margin: 0 20px 20px 20px;
+        width: 50%;
+      }
+
+      h3{
+        margin: 0px 15px;
+        color: #fff;
+        font-family: 'League Spartan', sans-serif;
+      }
+      p{
+        margin: 0 0 5px 15px;
+        font-family: 'League Spartan', sans-serif;
+      }
+      
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .container{
+        padding: 5%;
+      }
+      .header{
+        width: 50%;
+        float: left;
+      }
+      .rating{
+        width: 50%;
+        float: right;
+      }
+      .testimonials{
+        clear: both;
+      }
+      .profile{
+        display:inline-block;
+        position: relative;
+        bottom: 10px;
+      }
+      .images{
+        width: 45px; border-radius: 100%;
+        padding: 0;
+      }
+
+      .testimony-description{
+        color: #fff;
+      }
+
+      .testimonials .profile p{
+        color: hsl(333, 80%, 67%);
+        font-family: 'League Spartan', sans-serif;
+      }
+      .header p{
+        font-size: 1rem;
+        font-family: 'League Spartan', sans-serif;
+        color: hsl(303, 10%, 53%);
+        line-height: 1.5;
+        font-weight: 500;
+        margin: 20px 20px;
+        width: 60%;
+      }
+
+      .rating p{
+        background-color: hsl(300, 24%, 96%);
+        width: fit-content;
+        padding: 15px 50px;
+        font-family: 'League Spartan', sans-serif;
+        color: hsl(300, 43%, 22%);
+        font-size: 1.1rem;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+      .rating img{
+        margin: 0 5px;
+      }
+      .testimony1, .testimony2, .testimony3{
+        width: 35%; 
+        margin: 20px; 
+        background-color: hsl(300, 43%, 22%); 
+        padding: 35px; 
+        border-radius: 10px;
+      }
+      .testimony2{
+        position: relative;
+        top: 20px;
+      }
+      .testimony3{
+        position: relative;
+        top: 40px;
+      }
+      .rating-paragraph2{
+        position: relative; 
+        left: 30px;
+
+      }
+      .rating-paragraph3{
+        position: relative;
+        left: 60px;
+      }
+
+      /* media queries for maximum 375px size */
+
+      @media (max-width: 425px){
+
+      
+        .header{
+        width: 100%;
+        clear: both;
+        text-align: center;
+      }
+      .rating{
+        width: 100%;
+        clear: both;
+        text-align: center;
+      }
+      .testimonials{
+        display: flex;
+        flex-direction: column;
+      }
+
+      .testimony1, .testimony2, .testimony3{
+        width: 80%;
+        padding: 20px;
+      }
+
+      .rating-paragraph1, .rating-paragraph2,.rating-paragraph3{
+        
+        margin: auto;
+        padding: 0;
+        
+      }
+     .rating-paragraph2, .rating-paragraph3{
+      position: inherit;
+     }
+     span{
+      display: block;
+      margin-top: 5px;
+     }
+     h1,.header p{
+      width: 90%;
+     }
+    
+      
+      }
+
+      /* media queries for maximum height 768px */
+      @media (min-width: 426px) and (max-width:768px){
+      
+        .header{
+        width: 100%;
+        clear: both;
+      }
+      .rating{
+        text-align: center;
+        width: 100%;
+        clear: both;
+      }
+      .testimonials{
+        display: flex;
+        flex-direction: column;
+      }
+
+      .testimony1, .testimony2, .testimony3{
+        width: 70%;
+        padding: 20px;
+        margin: auto auto 20px auto;
+      }
+
+      .rating-paragraph1, .rating-paragraph2,.rating-paragraph3{
+        margin: auto;
+      }
+     .rating-paragraph2, .rating-paragraph3{
+      position: inherit;
+     }
+     span{
+      display: inline-block;
+      margin-top: 5px;
+     }
+     h1,.header p{
+      width: 70%;
+      margin: auto auto 20px auto;
+      text-align: center;
+     }
+     .testimony-description{
+      line-height: 1.2;
+      font-size: 1.1rem;
+     }
+     
+      }
+
+      @media(min-width:769px) and (max-width:1000px){
+        .profile{
+        display: block;
+        position: relative;
+        bottom: 0;
+      }
+      .rating{
+        position: relative;
+        right: 70px;
+      }
+      .images{
+        padding: 5px;
+        margin-left: 8px;
+      }
+      .testimony1, .testimony2, .testimony3{
+        padding: 15px;
+        width: 33%;
+      }
+      }
+
+     
+
+    </style>
+  </head>
+  <body style="margin: auto;">
+    <div class="container">
+      <div class="header">
+        <h1>10,000+ of our users love our products.</h1>
+        <p>We only provide great products combined with excellent customer service.
+          See what our satisfied customers are saying about our services.</p>
+      </div>
+      <div class="rating">
+        <p class="rating-paragraph1"><img src="images/icon-star.svg" alt=""><img src="images/icon-star.svg" alt=""><img src="images/icon-star.svg" alt=""><img src="images/icon-star.svg" alt=""><img src="images/icon-star.svg" style="margin-right: 15px;" alt=""> <span>Rated 5 Stars in Reviews</span> </p>
+        <p class="rating-paragraph2"><img src="images/icon-star.svg" alt=""><img src="images/icon-star.svg" alt=""><img src="images/icon-star.svg" alt=""><img src="images/icon-star.svg" alt=""><img src="images/icon-star.svg" style="margin-right: 15px;" alt=""> <span>Rated 5 Stars in Reviews</span> </p>
+        <p class="rating-paragraph3"><img src="images/icon-star.svg" alt=""><img src="images/icon-star.svg" alt=""><img src="images/icon-star.svg" alt=""><img src="images/icon-star.svg" alt=""><img src="images/icon-star.svg" style="margin-right: 15px;" alt=""><span>Rated 5 Stars in BestTech</span> </p>
+      </div>
+      <div class="testimonials" style="display: flex;">
+        <div class="testimony1">
+          <img class="images" src="images/image-colton.jpg" alt="image-colton" >
+          <div class="profile">
+            <h3>Colton Smith</h3>
+            <p>Verified Buyer</p>
+          </div>
+          <p class="testimony-description" style="margin-top: 15px;">"We needed the same printed design as the one we had ordered a week prior.
+            Not only did they find the original order, but we also received it in time.
+            Excellent!"</p>
+        </div>
+        <div class="testimony2">
+          <img class="images" src="images/image-irene.jpg" alt="image-irene" >
+          <div class="profile">
+            <h3>Irene Roberts </h3>
+            <p>Verified Buyer</p>
+          </div>
+          <p class="testimony-description" style="margin-top: 15px;">"Customer service is always excellent and very quick turn around. Completely
+            delighted with the simplicity of the purchase and the speed of delivery."</p>
+        </div>
+        <div class="testimony3">
+          <img class="images" src="images/image-anne.jpg" alt="image-anne" >
+          <div class="profile">
+            <h3>Anne Wallace </h3>
+            <p>Verified Buyer</p>
+          </div>
+          <p class="testimony-description" style="margin-top: 15px;">"Put an order with this company and can only praise them for the very high
+            standard. Will definitely use them again and recommend them to everyone!"</p>
+        </div>
+      </div>
+      
+    
+
+    
+    
+    
+    
+    
+    
+     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+  </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/Haileleul4337">Haileleul Girma Mekonnen</a>.
+    </div>
+  </body>
+</html>
